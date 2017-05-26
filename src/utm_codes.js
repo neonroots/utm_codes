@@ -12,14 +12,15 @@ window.addEventListener('load', function() {
     utmParams = ['utm_source', 'utm_medium', 'utm_content', 'utm_campaign'];
 
     $.each(utmParams, function(_paramsIndex, utmParam) {
-      var utmParamValue;
+      var utmParamValue, utmFieldID;
       utmParamValue = urlParams.get(utmParam);
+      utmFieldID = `contact[${utmParam}]`;
 
       if (utmParamValue) {
         $('<input>').attr({
           type: 'hidden',
-          id: utmParam,
-          name: utmParam,
+          id: utmFieldID,
+          name: utmFieldID,
           value: utmParamValue
         }).appendTo($form);
       }

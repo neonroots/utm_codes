@@ -1,10 +1,10 @@
 {
   "name": "utm_codes",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple JS library that appends utm codes received via GET params to existing forms",
   "main": "utm_codes.js",
   "scripts": {
-    "compress": "coffee --compile src && minify src/utm_codes.js --template ../dist/{{filename}}-1.0.1-{{sha}}.min.{{ext}} --clean"
+    "compress": "coffee --compile src && minify src/utm_codes.js --template ../dist/{{filename}}-1.0.2-{{sha}}.min.{{ext}} --clean"
   },
   "repository": {
     "type": "git",

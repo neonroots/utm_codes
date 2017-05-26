@@ -15,13 +15,19 @@ window.addEventListener 'load', ->
     $.each utmParams, (_paramsIndex, utmParam) ->
       utmParamValue = urlParams.get(utmParam)
       paramName = $form.data('utm-tracker-param-name')
-      utmFieldID = if paramName then paramName + '[' + utmParam + ']' else utmParamValue
+
+      if paramName
+        utmFieldId = paramName + '_' + utmParam
+        utmFieldName = paramName + '[' + utmParam + ']'
+      else
+        utmFieldId = utmParam
+        utmFieldName = utmParam
 
       if utmParamValue
         $('<input>').attr(
           type: 'hidden'
-          id: utmFieldID
-          name: utmFieldID
+          id: utmFieldId
+          name: utmFieldName
           value: utmParamValue
         ).appendTo $form
 

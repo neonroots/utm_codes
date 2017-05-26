@@ -14,7 +14,7 @@ window.addEventListener('load', function() {
     $.each(utmParams, function(_paramsIndex, utmParam) {
       var utmParamValue, utmFieldID;
       utmParamValue = urlParams.get(utmParam);
-      utmFieldID = `contact[${utmParam}]`;
+      utmFieldID = "contact[" + utmParam + "]";
 
       if (utmParamValue) {
         $('<input>').attr({

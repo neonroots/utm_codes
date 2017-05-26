@@ -17,3 +17,4 @@ Simple JS library that appends utm codes received via GET params to existing for
 
 * add the *utm-tracker-required* class to all the forms that you want to update with the utm code hidden fields.
 * add the *utm_codes.min.js* to your website.
+* if you want to wrap the params inside an object, example contact, you have to add `<form class='utm-tracker-requried' data-utm-tracker-param-name='contact'>`

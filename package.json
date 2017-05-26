@@ -4,7 +4,7 @@
   "description": "Simple JS library that appends utm codes received via GET params to existing forms",
   "main": "utm_codes.js",
   "scripts": {
-    "compress": "minify src/utm_codes.js --template ../dist/{{filename}}-1.0.0-{{sha}}.min.{{ext}} --clean"
+    "compress": "coffee --compile src && minify src/utm_codes.js --template ../dist/{{filename}}-1.0.1-{{sha}}.min.{{ext}} --clean"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/neonroots/utm_codes#readme",
   "dependencies": {
+    "coffee-script": "^1.12.6",
     "minifier": "^0.8.1"
   }
 }

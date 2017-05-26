@@ -22,5 +22,6 @@ window.addEventListener 'load', ->
           type: 'hidden'
           id: utmFieldID
           name: utmFieldID
-          value: utmParamValue).appendTo $form
+          value: utmParamValue
+        ).appendTo $form
 
